@@ -29,7 +29,7 @@ Simple in‑memory **publisher/ subscriber** bus with a thin gRPC.
 ```yaml
 grpc:
   host: "0.0.0.0"   # listen interface
-  port: 9090        # listen port
+  port: 8080        # listen port
 log:
   level: "info"      # trace | debug | info | warn | error | fatal
 ```
