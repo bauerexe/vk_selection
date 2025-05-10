@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package api.pubsub.v1;
+
+option go_package = "vk_otbor/api/pubsub/v1;pubsubv1";
+
+service PubSub {
+  rpc Subscribe (SubscribeRequest) returns (stream Event);
+  rpc Publish   (PublishRequest)   returns (google.protobuf.Empty);
+}
+
+message SubscribeRequest {string key = 1;}
+message PublishRequest   {string key = 1; string data = 2;}
+message Event            {string data = 1;}
